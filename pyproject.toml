@@ -1,0 +1,28 @@
+[tool.poetry]
+name = "ujira"
+version = "0.1.0"
+description = "lightweight UI for JIRA"
+authors = ["Jesper Devantier <jesper.devantier@protonmail.com>"]
+license = "BSD"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+aiojira = "^0.1.14"
+cachetools = "^4.2.1"
+asyncache = "^0.1.1"
+fastapi = "^0.63.0"
+pydantic = "^1.8.1"
+python-dotenv = "^0.17.0"
+pydantic-yaml = "^0.2.3"
+"ruamel.yaml" = "^0.17.4"
+aiofiles = "^0.6.0"
+dominate = "^2.6.0"
+
+[tool.poetry.dev-dependencies]
+black = "^20.8b1"
+ipython = "^7.22.0"
+uvicorn = "^0.13.4"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

@@ -1,0 +1,4 @@
+queries:
+  my_issues:
+    label: "My Assigned Issues"
+    jql: "assignee = currentUser() AND resolution = Unresolved", ""

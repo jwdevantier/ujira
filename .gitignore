@@ -1,0 +1,29 @@
+*.swp
+
+# python temporary files
+__pycache__
+*.pyc
+*.egg-info
+
+# virtual environment files
+**/venv
+
+# temp files from tools etc
+**/.mypy_cache
+**/.pytest_cache
+
+# editors
+**/.idea
+**/.vscode
+
+# build artifacts (cython)
+*.o
+*.so
+*.dylib
+*.dll
+dist/**
+build/**
+
+# ujira-specific files
+auth.env
+config.yml
