@@ -24,13 +24,14 @@ To get started you will need to
 
 1. provide your JIRA credentials and endpoint
 2. (optionally) provide additional JQL queries you want to use
-3. Install the various back- and front-end dependencies.
+3. Install the various dependencies.
+4. Run the server(!)
 
 ### Pointing ujira to your jira installation
 `ujira` expects to read an `env` file during startup which defines some environment variables, this is namely
 used to configure which JIRA installation to talk to and which credentials to present.
 
-Create an `env` file with the following information, remember to change the values:
+Create an `auth.env` file with the following information, remember to change the values:
 
 ```
 JIRA_ENDPOINT="https://myjira.mycompany.com"
@@ -38,7 +39,18 @@ JIRA_USERNAME="my-username"
 JIRA_PASSWORD="my-password"
 ```
 
-## Backend
+Create another file, `config.yml`, here you can store JQL queries marking things you would want to track. For example:
+```yml
+queries:
+  my_issues:
+    label: "My Assigned Issues"
+    jql: "assignee = currentUser() AND resolution = Unresolved", ""
+```
 
-1. Install [poetry](https://python-poetry.org) and ensure it is in your $PATH
-2. Install dependencies (`poetry install`)
+## Install dependencies
+
+Run `make install-deps` - this requires [poetry](https://python-poetry.org) being installed and in your $PATH. Consult their website for install instructions.
+
+## Run the server
+
+Run `make dev-server`, the server should start on `http://localhost:8000`
