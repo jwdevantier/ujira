@@ -4,7 +4,7 @@
 
 ## The motivation
 This project is spawned from the frustrations of working with JIRA with a less-than-optimal connection.
-JIRA is bloated. To load an issue page, some ~30+ requests are made in my base, 17+ of which are not cached, 16 of which can only be even initiated sometime after the initial request for a `batch.js` blob has completed.
+JIRA is bloated. To load an issue page, some ~30+ requests are made in my case, 17+ of which are not cached, 16 of which can only be even initiated sometime after the initial request for a `batch.js` blob has completed.
 In anything less than the very best connection scenario, the experience degrades fast.
 
 ## What this does
